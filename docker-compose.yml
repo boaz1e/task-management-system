@@ -16,7 +16,7 @@ services:
       - backend
 
   database:
-    image: "postgres:latest" # Use an appropriate database image
+    image: "postgres:latest"
     environment:
       POSTGRES_DB: your_database_name
       POSTGRES_USER: your_database_user
