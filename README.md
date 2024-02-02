@@ -1,16 +1,16 @@
 # Task Management App
 
-This project is a simple Task Management App with a FastAPI backend and a Streamlit frontend. It allows users to create, read, update, and delete tasks. The backend is responsible for handling data storage (MongoDB) and retrieval, while the frontend provides a user-friendly interface to interact with the tasks.
+This project is a simple Task Management App with a FastAPI backend and a Streamlit frontend. The application allows users to perform CRUD (Create, Read, Update, Delete) operations on tasks. The backend, built with FastAPI, handles data storage using MongoDB, while the frontend, created with Streamlit, provides an intuitive interface for task management.
 
 ## Features
 
-- **Create Task:** Users can create a new task by providing a title, description, and status (todo or done).
+1. **Create Task:** Users can create a new task by providing a title, description, and status (todo or done).
 
-- **Display Tasks:** Existing tasks are displayed, showing their title, description, and status.
+2. **Display Tasks:** Existing tasks are displayed, showing their title, description, and status.
 
-- **Update Task:** Users can update the title, description, and status of an existing task.
+3. **Update Task:** Users can update the title, description, and status of an existing task.
 
-- **Delete Task:** Users can delete a task.
+4. **Delete Task:** Users can delete a task.
 
 ## Technologies Used
 
@@ -22,37 +22,9 @@ This project is a simple Task Management App with a FastAPI backend and a Stream
 
 ## Setup Instructions
 
-1. **Backend Setup:**
+### Using Docker:
 
-   - Install the required Python packages: `pip install fastapi[all] sqlalchemy streamlit requests`
-   - Run the FastAPI backend using the command: `uvicorn backend:app --reload`
-
-2. **Frontend Setup:**
-
-   - Run the Streamlit frontend using the command: `streamlit run app.py`
-
-3. **Access the App:**
-   - Open your web browser and go to `http://localhost:8501` to access the Task Management App.
-
-## API Endpoints
-
-- **Create Task:**
-
-  - Endpoint: `POST /tasks/`
-  - Payload: `{ "title": "Task Title", "description": "Task Description", "status": "todo" }`
-
-- **Read Tasks:**
-
-  - Endpoint: `GET /tasks/`
-
-- **Read Task by ID:**
-
-  - Endpoint: `GET /tasks/{task_id}`
-
-- **Update Task by ID:**
-
-  - Endpoint: `PUT /tasks/{task_id}`
-  - Payload: `{ "title": "Updated Title", "description": "Updated Description", "status": "done" }`
-
-- **Delete Task by ID:**
-  - Endpoint: `DELETE /tasks/{task_id}`
+```bash
+docker build -t task-management-app .
+docker run -p 8501:8501 task-management-app
+```
