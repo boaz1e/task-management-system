@@ -1,9 +1,9 @@
-FROM python:3.9
+FROM python:3.11
 
-WORKDIR /app
+WORKDIR /frontend
 
-COPY ./app.py /streamlit-app/app.py
+COPY . /frontend
 
-RUN pip install streamlit requests
+RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["streamlit", "run", "app.py"]
