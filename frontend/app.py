@@ -14,34 +14,32 @@ def main():
 
     st.title("Task Management App")
 
-    # Sidebar for task creation
     new_task_data = create_task_sidebar()
     if new_task_data:
         created_task = create_task(new_task_data)
         st.success(f"Task '{created_task['title']}' created successfully!")
 
-    # Display existing tasks
     tasks = get_tasks()
     if tasks:
         display_existing_tasks(tasks)
 
-        # Sidebar for task update and deletion
         selected_task, selected_task_index = update_delete_sidebar(tasks)
 
         if selected_task:
-            # Update Task
             updated_title = st.sidebar.text_input("Title", selected_task["title"])
             updated_description = st.sidebar.text_area("Description", selected_task["description"])
-            updated_status = st.sidebar.selectbox("Status", ["todo", "done"], key=f"update_status_{selected_task_index}", index=["todo", "done"].index(selected_task["status"]))
+            updated_status = st.sidebar.selectbox("Status", ["todo", "done"], key=f"update_status_{selected_task['id']}", index=["todo", "done"].index(selected_task["status"]) if selected_task["status"] in ["todo", "done"] else 0)
+
 
             if st.sidebar.button("Update Task"):
                 updated_task_data = {"title": updated_title, "description": updated_description, "status": updated_status}
-                updated_task = update_task(selected_task_index + 1, updated_task_data)
-                st.success(f"Task '{updated_task['title']}' updated successfully!")
+                update_task(selected_task['id'], updated_task_data)  
+                st.success(f"Task '{updated_title}' updated successfully!")
 
-            # Delete Task
+                st.experimental_rerun()
+
             if st.sidebar.button("Delete Task"):
-                deleted_task = delete_task(selected_task_index + 1)
+                deleted_task = delete_task(selected_task['id']) 
                 st.warning(f"Task '{deleted_task['title']}' deleted successfully!")
 
 if __name__ == "__main__":
