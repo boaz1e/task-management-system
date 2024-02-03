@@ -32,11 +32,11 @@ def read_task(task_id: int, db: Session = Depends(get_db)):
 def update_task(task_id: int, task: Task, db: Session = Depends(get_db)):
     db_task = db.query(TaskModel).filter(TaskModel.id == task_id).first()
     if db_task:
-        for key, value in task.dict().items():
+        for key, value in task.dict(exclude_unset=True).items():
             setattr(db_task, key, value)
         db.commit()
         db.refresh(db_task)
-        return task
+        return db_task  # Return the updated task from the database
     raise HTTPException(status_code=404, detail="Task not found")
 
 @app.delete("/tasks/{task_id}", response_model=Task)
