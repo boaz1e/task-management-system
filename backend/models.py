@@ -3,6 +3,7 @@ from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
 from pydantic import BaseModel
+from typing import Optional
 
 Base = declarative_base()
 
@@ -15,6 +16,10 @@ class TaskModel(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
 
 class Task(BaseModel):
+    id: Optional[int] = None
     title: str
     description: str
     status: str
+
+    class Config:
+        orm_mode = True
