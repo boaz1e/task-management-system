@@ -7,6 +7,12 @@ services:
       - "8000:8000"
     depends_on:
       - database
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_NAME=${DB_NAME}
 
   frontend:
     build: ./frontend
@@ -16,8 +22,9 @@ services:
       - backend
 
   database:
-    image: "postgres:latest"
+    image: "mysql:latest"
     environment:
-      POSTGRES_DB: your_database_name
-      POSTGRES_USER: your_database_user
-      POSTGRES_PASSWORD: your_database_password
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+      - MYSQL_DATABASE=${DB_NAME}
+    ports:
+      - "${DB_PORT}:${DB_PORT}"
