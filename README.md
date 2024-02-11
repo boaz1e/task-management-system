@@ -26,7 +26,7 @@ This is a simple Task Management System API built with FastAPI.
 2. Navigate to the project directory:
 
 ```bash
-cd fastapi-task-management-system/backend
+cd task-management-system/backend
 ```
 
 3. Build the Docker image:
