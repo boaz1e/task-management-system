@@ -25,6 +25,5 @@ This project is a simple Task Management App with a FastAPI backend and a Stream
 ### Using Docker:
 
 ```bash
-docker build -t task-management-app .
-docker run -p 8501:8501 task-management-app
+docker-compose up -d
 ```
