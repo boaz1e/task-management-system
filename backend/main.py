@@ -11,11 +11,12 @@ app = FastAPI()
 
 @app.post("/tasks/", response_model=Task)
 def create_task(task: Task, db: Session = Depends(get_db)):
-    db_task = TaskModel(**task.model_dump())
+    db_task = TaskModel(title=task.title, description=task.description, status=task.status)
     db.add(db_task)
     db.commit()
     db.refresh(db_task)
     return task
+
 
 @app.get("/tasks/", response_model=list[Task])
 def read_tasks(db: Session = Depends(get_db)):
