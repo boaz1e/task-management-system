@@ -23,7 +23,7 @@ This project is a simple Task Management App with a FastAPI backend and a Stream
 - **Streamlit:** An open-source Python library for creating web applications with minimal code.
 
 ## Requirements
-Docker 
+* Docker 
 
 ## Setup Instructions
 
