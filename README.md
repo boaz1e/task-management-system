@@ -15,7 +15,7 @@ This project is a simple Task Management App with a FastAPI backend and a Stream
 ## Technologies Used
 
 - **FastAPI:** A modern, fast web framework for building APIs with Python.
-- **MongoDB:** A document-oriented NoSQL database used for storing task data.
+- **MySQL:** A relational database management system used for storing task data.
 - **Streamlit:** An open-source Python library for creating web applications with minimal code.
 
 ## Setup Instructions
