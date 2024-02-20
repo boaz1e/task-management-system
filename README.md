@@ -24,7 +24,7 @@ This project is a simple Task Management App with a FastAPI backend and a Stream
    ```
    git clone https://github.com/boaz1e/task-management-system.git
    ```
-2. Navigate to the project directory:
+3. Navigate to the project directory:
   ```
   cd task-management-system
   ```
