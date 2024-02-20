@@ -1,6 +1,6 @@
 # Task Management App
 
-This project is a simple Task Management App with a FastAPI backend and a Streamlit frontend. The application allows users to perform CRUD (Create, Read, Update, Delete) operations on tasks. The backend, built with FastAPI, handles data storage using MongoDB, while the frontend, created with Streamlit, provides an intuitive interface for task management.
+This project is a simple Task Management App with a FastAPI backend and a Streamlit frontend. The application allows users to perform CRUD (Create, Read, Update, Delete) operations on tasks. The backend, built with FastAPI, handles data storage using MySQL, while the frontend, created with Streamlit, provides an intuitive interface for task management.
 
 ## Features
 
