@@ -21,7 +21,6 @@ This project is a simple Task Management App with a FastAPI backend and a Stream
 ## Setup Instructions
 
 1. Clone the repository:
-
    ```
    git clone https://github.com/boaz1e/task-management-system.git
    ```
