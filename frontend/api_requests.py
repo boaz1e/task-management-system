@@ -1,7 +1,7 @@
 # api_requests.py
 import httpx
 
-BASE_URL = "http://127.0.0.1:8000"
+BASE_URL = "http://backend:8000"
 
 async def get_tasks():
     async with httpx.AsyncClient() as client:
