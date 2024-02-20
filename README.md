@@ -2,6 +2,10 @@
 
 This project is a simple Task Management App with a FastAPI backend and a Streamlit frontend. The application allows users to perform CRUD (Create, Read, Update, Delete) operations on tasks. The backend, built with FastAPI, handles data storage using MySQL, while the frontend, created with Streamlit, provides an intuitive interface for task management.
 
+![image](https://github.com/boaz1e/task-management-system/assets/108184198/0f84cb4e-efc6-485b-bc6d-970977a1dba9)
+
+
+
 ## Features
 
 1. **Create Task:** Users can create a new task by providing a title, description, and status (todo or done).
@@ -17,6 +21,9 @@ This project is a simple Task Management App with a FastAPI backend and a Stream
 - **FastAPI:** A modern, fast web framework for building APIs with Python.
 - **MySQL:** A relational database management system used for storing task data.
 - **Streamlit:** An open-source Python library for creating web applications with minimal code.
+
+## Requirements
+* Docker 
 
 ## Setup Instructions
 
