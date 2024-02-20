@@ -15,16 +15,25 @@ This project is a simple Task Management App with a FastAPI backend and a Stream
 ## Technologies Used
 
 - **FastAPI:** A modern, fast web framework for building APIs with Python.
-
-- **SQLAlchemy:** A SQL toolkit and Object-Relational Mapping (ORM) library for Python.
-
+- **MongoDB:** A document-oriented NoSQL database used for storing task data.
 - **Streamlit:** An open-source Python library for creating web applications with minimal code.
 
 ## Setup Instructions
 
-### Using Docker:
+1. Clone the repository:
 
-```bash
+   ```
+   git clone [https://github.com/your-repo.git](https://github.com/boaz1e/task-management-system.git)https://github.com/boaz1e/task-management-system.git
+   ```
+2. Navigate to the project directory:
+  ```
+  cd task-management-system
+  ```
+3. Build and run the Docker containers:
+```
 docker-compose build
 docker-compose up
 ```
+Access the Streamlit frontend at localhost:8501 to manage tasks.
+
+To test the backend API, navigate to localhost:8000/docs for the interactive API documentation provided by FastAPI.
