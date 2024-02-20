@@ -22,6 +22,9 @@ This project is a simple Task Management App with a FastAPI backend and a Stream
 - **MySQL:** A relational database management system used for storing task data.
 - **Streamlit:** An open-source Python library for creating web applications with minimal code.
 
+## Requirements
+Docker 
+
 ## Setup Instructions
 
 1. Clone the repository:
