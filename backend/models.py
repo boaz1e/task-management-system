@@ -23,4 +23,10 @@ class Task(BaseModel):
     status: str
 
     class Config:
-        from_attributes  = True
+        json_schema_extra = {
+            "example": {
+                "title": "Task Title",
+                "description": "Task Description",
+                "status": "Pending"
+            }
+        }
