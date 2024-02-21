@@ -47,6 +47,6 @@ Access the Streamlit frontend at ```localhost:8501``` to manage tasks.
 To test the backend API, navigate to ```localhost:8000/docs``` for the interactive API documentation provided by FastAPI.
 
 
-[![Video thumbnail](https://img.youtube.com/vi/QLGogzCX0m4/0.jpg)](https://www.youtube.com/watch?v=QLGogzCX0m4)
+[![Video thumbnail](https://i9.ytimg.com/vi_webp/QLGogzCX0m4/mq1.webp?sqp=CNjf1q4G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLCkxrrmnhc9qa7zfvazud8GJ1sNlw)](https://www.youtube.com/watch?v=QLGogzCX0m4)
 
 
