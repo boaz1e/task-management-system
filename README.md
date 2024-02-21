@@ -45,3 +45,6 @@ docker-compose up
 Access the Streamlit frontend at ```localhost:8501``` to manage tasks.
 
 To test the backend API, navigate to ```localhost:8000/docs``` for the interactive API documentation provided by FastAPI.
+
+
+[![Video]](https://www.youtube.com/watch?v=QLGogzCX0m4)
